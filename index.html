@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=+, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+
+
+    <div class="welcome">
+        <h1>Welcome Back!</h1>
+        <p>To keep connected with us please login with your personal info</p>
+        <button onclick="change()" id="signin">SIGN IN</button>
+    </div>
+
+
+    <div class="sign-up">
+        <h1>Create Account</h1>
+        <div class="icons">
+            <img src="assests/images/facebook.png" width="20px">
+            <img src="assests/images/googleplus.png" width="20px">
+            <img src="assests/images/indeed.png" width="20px">
+        </div>
+<p>or use your email for registration.</p>
+        <div class="form">
+            <input type="text" placeholder="Name" id="name">
+            <p id="error1"></p>
+            <input type="email" placeholder="Email" id="email">
+            <p id="error2"></p>
+            <input type="password" placeholder="Password" id="password">
+            <p id="error3"></p>
+        
+        </div>
+        <button onclick="done()">SIGN UP</button>
+    </div>
+</div>
+    
+<div class="success">
+    <p>Signed Up Successfully!</p>
+</div>
+
+<script>
+
+let name=document.querySelector("#name");
+let email=document.querySelector("#email");
+let password=document.querySelector("#password");
+let err1=document.querySelector("#error1");
+let err2=document.querySelector("#error2");
+let err3=document.querySelector("#error3");
+let success=document.querySelector(".success");
+let cont=document.querySelector(".container")
+function done(){
+
+    if(name.value=="")
+    {
+err1.innerHTML="Please Enter Your Name";
+name.classList.add("active");
+return false;
+    }
+    else{
+        err1.style.display="none";
+        name.classList.remove("active");
+       
+    }
+    
+    
+    if(email.value==""){
+err2.innerHTML="Please Enter Your Email ID";
+email.classList.add("active");
+return false;
+    }
+    else{
+        err2.style.display="none";
+        email.classList.remove("active");
+    }
+     
+    if(password.value==""){
+err3.innerHTML="Please Enter Your Password";
+password.classList.add("active");
+return false
+    }
+    else{
+        err3.style.display="none";
+        password.classList.remove("active");
+    }
+    success.style.display="block";
+    cont.style.filter="blur(1px)"
+    cont.style.opacity="90%"
+
+}
+
+</script>
+
+
+
+</body>
+</html>

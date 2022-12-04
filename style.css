@@ -1,0 +1,206 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+@font-face {
+    font-family: myfont;
+    src: url(assests/Roboto/Roboto-Medium.ttf);
+}
+body{
+    background-image: url(assests/images/background.png);
+    height: 100vh;
+    width: 100%;
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: myfont;
+}
+.container{
+    width: 70%;
+    height: 80vh;
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+animation-name: ani;
+animation-duration: 0.5s;
+animation-direction: alternate;
+   box-shadow: 1px 1px 20px rgb(179, 177, 177);
+}
+@keyframes ani {
+    from{
+        transform: scale(1.5)
+    }
+    to{
+        transform:scale(1)
+    }
+}
+.welcome{
+    width: 30%;
+    opacity: 90%;
+    background-color:#3ab397;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 50px;
+    text-align: center;
+  color: white;
+  transition: all;
+  transition-duration: 3s;
+
+}
+.welcome p{
+    margin: 40px 0px;
+}
+.welcome h1{
+letter-spacing: 1px;
+}
+.welcome button{
+    padding: 10px 45px;
+    background: none;
+    border: solid white 2px;
+    color: white;
+    border-radius: 30px;
+    transition: all;
+    transition-duration: 0.2s;
+
+}
+.welcome button:hover{
+    padding: 10px 45px;
+    background: white;
+    border: solid white 2px;
+    color: #3ab397;
+    border-radius: 30px;
+}
+.sign-up{
+    background-color:white;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 0px;
+}
+.sign-up h1{
+    color: #3ab397;
+}
+.icons{
+    align-items: center;
+    display: flex;
+    width: 17%;
+    justify-content: space-between;
+}
+.icons img{
+    border: solid rgb(82, 81, 81) 0.1px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3px;
+    transition: all;
+    transition-duration: 0.2s;
+}
+.icons img:hover{
+    background-color:#3ab3975d;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+
+    height: 35%;
+    justify-content: space-between;
+}
+input{
+    background-color: gainsboro;
+    border:none;
+    height: 30px;
+    padding: 0px 2%;
+    border-radius: 3px;
+}
+.sign-up button{
+    padding: 10px 45px;
+    background: #3ab397;
+    border: solid white 2px;
+    color: white;
+    border-radius: 30px;
+    transition: all;
+    transition-duration: 0.2s;
+}
+.sign-up button:hover{
+    padding: 10px 45px;
+    background: white;
+    border: solid #3ab397 2px;
+    color: #3ab397;
+    border-radius: 30px;
+}
+.change2{
+    order: 2;
+    transition: all;
+    transition-duration: 3s;
+}
+.active{
+    border: solid red 1px;
+}
+#error1,#error2,#error3{
+    font-size: 13px;
+    margin-left: 10px;
+    color: red;
+}
+.success{
+   position: absolute;
+   padding: 10px 30px;
+   border-radius: 10px;
+   background-color: white;
+   font-size: 20px;
+   box-shadow: 2px 2px 20px black;
+   display: none;
+   animation-name: ani2;
+   animation-duration: 0.2s;
+}
+@keyframes ani2 {
+    from{
+        transform: scale(0)
+    }
+    to{
+        transform: scale(1);
+    }
+}
+@media screen and (max-width:500px) {
+    .container{
+        flex-direction: column;
+        width: 100vw;
+        height: 100vh;
+        overflow: auto;
+       
+    }
+    .welcome{
+        width: 100%;
+        height: 40vh;
+        flex-direction: column;
+        padding:0px 0px;
+    }
+    .welcome p{
+        margin: 0px 0px;
+    }
+    .sign-up{
+        width: 100%;
+        height: 60vh;
+        padding: 20% 0;
+    
+    }
+    .form{
+        height: 30%;
+    }
+    input{
+        height: 30px;
+    }
+    .icons{
+        width: 25%;
+    }
+ 
+}
